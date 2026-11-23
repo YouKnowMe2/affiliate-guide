@@ -1,0 +1,4 @@
+project_id = "ehzyqposjunnvrapivfn"
+
+[functions.recaptcha-config]
+verify_jwt = false

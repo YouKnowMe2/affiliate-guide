@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Hind+Siliguri:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Affiliate Guidance — Premium fintech-style design system. All HSL. */
+
+@layer base {
+  :root {
+    /* Light mode — clean premium */
+    --background: 220 33% 98%;
+    --foreground: 230 35% 7%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 35% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 35% 7%;
+
+    --primary: 250 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 230 90% 65%;
+
+    --secondary: 220 20% 96%;
+    --secondary-foreground: 230 35% 12%;
+
+    --muted: 220 20% 95%;
+    --muted-foreground: 230 12% 42%;
+
+    --accent: 280 85% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 152 70% 42%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 95% 55%;
+    --warning-foreground: 230 35% 7%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 18% 90%;
+    --input: 220 18% 90%;
+    --ring: 250 84% 60%;
+
+    --radius: 1rem;
+
+    /* Surfaces & glass */
+    --surface: 220 30% 99%;
+    --surface-elevated: 0 0% 100%;
+    --glass: 0 0% 100% / 0.6;
+    --glass-border: 230 30% 88% / 0.5;
+
+    /* Brand gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(250 84% 60%), hsl(280 85% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(230 90% 60%) 0%, hsl(260 85% 60%) 50%, hsl(290 80% 60%) 100%);
+    --gradient-mesh: radial-gradient(at 20% 0%, hsl(250 84% 60% / 0.25) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsl(280 85% 65% / 0.2) 0px, transparent 50%),
+                     radial-gradient(at 50% 100%, hsl(220 90% 60% / 0.15) 0px, transparent 50%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 30% 98%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(230 35% 9%) 0%, hsl(240 35% 6%) 100%);
+    --gradient-text: linear-gradient(135deg, hsl(250 84% 60%), hsl(280 85% 65%));
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(230 35% 20% / 0.06);
+    --shadow-md: 0 8px 24px -8px hsl(230 35% 20% / 0.1);
+    --shadow-lg: 0 24px 48px -16px hsl(230 35% 20% / 0.18);
+    --shadow-glow: 0 8px 32px -4px hsl(250 84% 60% / 0.4);
+    --shadow-card: 0 4px 24px -8px hsl(230 30% 30% / 0.08), 0 1px 2px hsl(230 30% 30% / 0.04);
+
+    /* Motion */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 232 38% 6%;
+    --foreground: 220 20% 96%;
+
+    --card: 232 32% 9%;
+    --card-foreground: 220 20% 96%;
+
+    --popover: 232 32% 9%;
+    --popover-foreground: 220 20% 96%;
+
+    --primary: 250 90% 68%;
+    --primary-foreground: 230 35% 7%;
+    --primary-glow: 230 95% 70%;
+
+    --secondary: 232 25% 14%;
+    --secondary-foreground: 220 20% 96%;
+
+    --muted: 232 25% 13%;
+    --muted-foreground: 230 12% 65%;
+
+    --accent: 280 90% 70%;
+    --accent-foreground: 230 35% 7%;
+
+    --success: 152 70% 50%;
+    --success-foreground: 230 35% 7%;
+
+    --warning: 38 95% 60%;
+    --warning-foreground: 230 35% 7%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 232 25% 18%;
+    --input: 232 25% 16%;
+    --ring: 250 90% 68%;
+
+    --surface: 232 35% 8%;
+    --surface-elevated: 232 30% 11%;
+    --glass: 232 30% 12% / 0.6;
+    --glass-border: 230 30% 30% / 0.5;
+
+    --gradient-primary: linear-gradient(135deg, hsl(250 90% 65%), hsl(280 90% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(230 90% 60%) 0%, hsl(260 85% 65%) 50%, hsl(290 85% 65%) 100%);
+    --gradient-mesh: radial-gradient(at 15% 10%, hsl(250 90% 60% / 0.35) 0px, transparent 50%),
+                     radial-gradient(at 85% 0%, hsl(280 90% 65% / 0.3) 0px, transparent 50%),
+                     radial-gradient(at 50% 100%, hsl(220 95% 55% / 0.25) 0px, transparent 50%);
+    --gradient-card: linear-gradient(180deg, hsl(232 32% 11%) 0%, hsl(232 32% 8%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(232 38% 6%) 0%, hsl(240 40% 4%) 100%);
+
+    --shadow-sm: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 8px 24px -8px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 24px 48px -16px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 8px 40px -4px hsl(250 90% 65% / 0.5);
+    --shadow-card: 0 4px 24px -8px hsl(0 0% 0% / 0.4), 0 1px 2px hsl(0 0% 0% / 0.2);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Hind Siliguri', 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', 'Hind Siliguri', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  .font-display {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    letter-spacing: -0.03em;
+  }
+
+  .font-bangla {
+    font-family: 'Hind Siliguri', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .container-app {
+    @apply mx-auto w-full max-w-[1200px] px-5 md:px-8;
+  }
+
+  .section-pad {
+    @apply py-12 md:py-20;
+  }
+
+  .glass {
+    background: hsl(var(--glass));
+    border: 1px solid hsl(var(--glass-border));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .mesh-bg {
+    background-image: var(--gradient-mesh);
+  }
+
+  .card-premium {
+    @apply rounded-2xl border bg-card transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-premium:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: hsl(var(--primary) / 0.4);
+  }
+
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  .animate-fade-up {
+    animation: fadeUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+  .animate-pulse-glow {
+    animation: pulseGlow 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
+  }
+}
+
+/* ─────────── WordPress prose rendering ───────────
+   Styles every common HTML tag returned from the WP REST API so that
+   long-form content (tables, code, quotes, lists, embeds, captions)
+   looks polished. */
+@layer components {
+  .wp-prose {
+    @apply text-foreground text-[1.0625rem] leading-relaxed;
+  }
+
+  /* Headings */
+  .wp-prose h1, .wp-prose h2, .wp-prose h3, .wp-prose h4, .wp-prose h5, .wp-prose h6 {
+    @apply font-display font-bold tracking-tight text-foreground;
+    scroll-margin-top: 6rem;
+  }
+  .wp-prose h1 { @apply text-4xl md:text-5xl mt-12 mb-5 leading-[1.15]; }
+  .wp-prose h2 {
+    @apply text-3xl md:text-4xl mt-14 mb-4 leading-tight pb-2 border-b border-border;
+  }
+  .wp-prose h3 { @apply text-2xl md:text-3xl mt-10 mb-3 leading-snug; }
+  .wp-prose h4 { @apply text-xl md:text-2xl mt-8 mb-3; }
+  .wp-prose h5 { @apply text-lg mt-6 mb-2; }
+  .wp-prose h6 { @apply text-base uppercase tracking-wider text-muted-foreground mt-6 mb-2; }
+
+  /* Paragraphs & text */
+  .wp-prose p { @apply my-5; }
+  .wp-prose strong, .wp-prose b { @apply font-semibold text-foreground; }
+  .wp-prose em, .wp-prose i { @apply italic; }
+  .wp-prose mark { @apply bg-warning/30 text-foreground px-1 rounded; }
+  .wp-prose small { @apply text-sm text-muted-foreground; }
+  .wp-prose sub { @apply align-sub text-xs; }
+  .wp-prose sup { @apply align-super text-xs; }
+  .wp-prose hr { @apply my-12 border-border; }
+
+  /* Links */
+  .wp-prose a {
+    @apply text-primary font-medium underline decoration-primary/30 underline-offset-4
+           hover:decoration-primary transition-colors;
+  }
+
+  /* Lists */
+  .wp-prose ul, .wp-prose ol { @apply my-5 pl-6 space-y-2; }
+  .wp-prose ul { @apply list-disc marker:text-primary; }
+  .wp-prose ol { @apply list-decimal marker:text-primary marker:font-semibold; }
+  .wp-prose li { @apply pl-1 leading-relaxed; }
+  .wp-prose li > ul, .wp-prose li > ol { @apply my-2; }
+  .wp-prose li > p { @apply my-2; }
+
+  /* Blockquotes */
+  .wp-prose blockquote {
+    @apply relative my-8 pl-6 pr-5 py-5 rounded-r-2xl bg-card border-l-4 border-primary
+           text-foreground italic shadow-premium-sm;
+  }
+  .wp-prose blockquote::before {
+    content: "“";
+    @apply absolute -top-2 left-3 text-6xl text-primary/30 font-display leading-none;
+  }
+  .wp-prose blockquote p { @apply my-2 first:mt-0 last:mb-0; }
+  .wp-prose blockquote cite {
+    @apply block mt-3 text-sm not-italic font-medium text-muted-foreground;
+  }
+
+  /* Inline code */
+  .wp-prose code {
+    @apply px-1.5 py-0.5 rounded-md bg-muted text-foreground text-[0.9em] font-mono;
+    font-family: "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+  }
+
+  /* Code blocks */
+  .wp-prose pre {
+    @apply my-6 p-5 rounded-2xl bg-foreground text-background overflow-x-auto
+           text-sm leading-relaxed shadow-premium-md;
+    font-family: "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+  }
+  .wp-prose pre code {
+    @apply bg-transparent text-inherit p-0 rounded-none text-sm;
+  }
+
+  /* Keyboard */
+  .wp-prose kbd {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md border border-border
+           bg-card text-xs font-mono shadow-premium-sm;
+  }
+
+  /* Tables */
+  .wp-prose figure.wp-block-table,
+  .wp-prose .wp-block-table { @apply my-8 overflow-x-auto; }
+  .wp-prose table {
+    @apply w-full my-8 border-collapse text-sm rounded-2xl overflow-hidden
+           shadow-premium-sm border border-border;
+  }
+  .wp-prose thead { @apply bg-muted; }
+  .wp-prose thead th {
+    @apply px-4 py-3 text-left font-semibold text-foreground border-b border-border;
+  }
+  .wp-prose tbody tr { @apply border-b border-border last:border-0 transition-colors hover:bg-muted/50; }
+  .wp-prose tbody td { @apply px-4 py-3 align-top; }
+  .wp-prose tfoot { @apply bg-muted/50 font-medium; }
+  .wp-prose tfoot td { @apply px-4 py-3; }
+  .wp-prose caption { @apply text-sm text-muted-foreground py-2 caption-bottom; }
+
+  /* Images & figures */
+  .wp-prose img {
+    @apply my-8 rounded-2xl shadow-premium-md max-w-full h-auto mx-auto;
+  }
+  .wp-prose figure { @apply my-8; }
+  .wp-prose figure img { @apply my-0; }
+  .wp-prose figcaption {
+    @apply mt-3 text-center text-sm text-muted-foreground italic;
+  }
+
+  /* Embeds */
+  .wp-prose iframe, .wp-prose video, .wp-prose embed, .wp-prose object {
+    @apply my-8 w-full rounded-2xl shadow-premium-md aspect-video;
+  }
+
+  /* Definition lists */
+  .wp-prose dl { @apply my-6; }
+  .wp-prose dt { @apply font-semibold mt-4 text-foreground; }
+  .wp-prose dd { @apply ml-4 text-muted-foreground mt-1; }
+
+  /* Details / summary */
+  .wp-prose details {
+    @apply my-5 rounded-xl border border-border bg-card px-5 py-4;
+  }
+  .wp-prose summary {
+    @apply cursor-pointer font-semibold text-foreground select-none;
+  }
+  .wp-prose details[open] summary { @apply mb-3; }
+
+  /* WP-specific blocks */
+  .wp-prose .wp-block-quote { @apply not-italic; }
+  .wp-prose .wp-block-pullquote {
+    @apply text-center text-2xl font-display font-semibold my-12 px-6 py-8
+           border-y-2 border-primary/30 text-foreground;
+  }
+  .wp-prose .wp-block-button { @apply my-6 inline-block; }
+  .wp-prose .wp-block-button__link, .wp-prose .wp-block-button a {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-primary text-primary-foreground
+           font-semibold no-underline shadow-premium-md hover:opacity-90 transition;
+  }
+  .wp-prose .wp-block-separator { @apply my-12 border-0 border-t border-border; }
+  .wp-prose .wp-block-code {
+    @apply my-6 p-5 rounded-2xl bg-foreground text-background overflow-x-auto;
+  }
+  .wp-prose .wp-block-image { @apply my-8; }
+  .wp-prose .wp-block-image img { @apply rounded-2xl shadow-premium-md mx-auto; }
+
+  /* Gallery */
+  .wp-prose .wp-block-gallery {
+    @apply my-8 grid gap-3;
+    grid-template-columns: repeat(var(--wp-gallery-cols, 3), minmax(0, 1fr));
+  }
+  .wp-prose .wp-block-gallery.columns-1 { --wp-gallery-cols: 1; }
+  .wp-prose .wp-block-gallery.columns-2 { --wp-gallery-cols: 2; }
+  .wp-prose .wp-block-gallery.columns-3 { --wp-gallery-cols: 3; }
+  .wp-prose .wp-block-gallery.columns-4 { --wp-gallery-cols: 4; }
+  .wp-prose .wp-block-gallery.columns-5 { --wp-gallery-cols: 5; }
+  .wp-prose .wp-block-gallery.columns-6 { --wp-gallery-cols: 6; }
+  @media (max-width: 768px) {
+    .wp-prose .wp-block-gallery { --wp-gallery-cols: 2 !important; }
+  }
+  .wp-prose .wp-block-gallery .wp-block-image,
+  .wp-prose .wp-block-gallery figure { @apply m-0; }
+  .wp-prose .wp-block-gallery img {
+    @apply w-full h-full object-cover rounded-xl shadow-premium-sm m-0;
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Columns */
+  .wp-prose .wp-block-columns {
+    @apply my-8 grid gap-6;
+    grid-template-columns: repeat(var(--wp-cols, 2), minmax(0, 1fr));
+  }
+  @media (max-width: 768px) {
+    .wp-prose .wp-block-columns { grid-template-columns: 1fr; }
+  }
+  .wp-prose .wp-block-column > :first-child { @apply mt-0; }
+  .wp-prose .wp-block-column > :last-child { @apply mb-0; }
+
+  /* Cover block */
+  .wp-prose .wp-block-cover {
+    @apply relative my-10 rounded-3xl overflow-hidden flex items-center justify-center
+           min-h-[320px] p-10 text-white;
+  }
+  .wp-prose .wp-block-cover .wp-block-cover__inner-container { @apply relative z-10 max-w-3xl mx-auto text-center; }
+  .wp-prose .wp-block-cover img,
+  .wp-prose .wp-block-cover video {
+    @apply absolute inset-0 w-full h-full object-cover m-0 rounded-none shadow-none;
+  }
+  .wp-prose .wp-block-cover .has-background-dim::before,
+  .wp-prose .wp-block-cover::after {
+    content: "";
+    @apply absolute inset-0 bg-foreground/40;
+  }
+  .wp-prose .wp-block-cover * { @apply text-white; }
+
+  /* Media & Text */
+  .wp-prose .wp-block-media-text {
+    @apply my-8 grid md:grid-cols-2 gap-6 items-center;
+  }
+  .wp-prose .wp-block-media-text__media img { @apply m-0 rounded-2xl; }
+  .wp-prose .wp-block-media-text__content > :first-child { @apply mt-0; }
+
+  /* Group / Stack / Row */
+  .wp-prose .wp-block-group { @apply my-6; }
+  .wp-prose .wp-block-group.has-background { @apply rounded-2xl p-6; }
+
+  /* Embeds (YouTube, Twitter, etc.) */
+  .wp-prose .wp-block-embed { @apply my-8; }
+  .wp-prose .wp-block-embed__wrapper {
+    @apply relative w-full overflow-hidden rounded-2xl shadow-premium-md;
+    aspect-ratio: 16 / 9;
+  }
+  .wp-prose .wp-block-embed__wrapper iframe,
+  .wp-prose .wp-block-embed__wrapper video {
+    @apply absolute inset-0 w-full h-full m-0 rounded-none;
+  }
+  .wp-prose .wp-block-embed.is-type-rich .wp-block-embed__wrapper,
+  .wp-prose .wp-block-embed.wp-block-embed-twitter .wp-block-embed__wrapper {
+    aspect-ratio: auto;
+  }
+
+  /* Buttons block (multi) */
+  .wp-prose .wp-block-buttons {
+    @apply my-6 flex flex-wrap gap-3;
+  }
+  .wp-prose .wp-block-buttons .wp-block-button { @apply m-0; }
+  .wp-prose .wp-block-button.is-style-outline .wp-block-button__link {
+    @apply bg-transparent text-primary border-2 border-primary;
+  }
+
+  /* Text alignment helpers */
+  .wp-prose .has-text-align-center { @apply text-center; }
+  .wp-prose .has-text-align-right  { @apply text-right; }
+  .wp-prose .has-text-align-left   { @apply text-left; }
+  .wp-prose .alignwide  { @apply max-w-none; }
+  .wp-prose .alignfull  { @apply max-w-none -mx-4 md:-mx-8 rounded-none; }
+  .wp-prose .aligncenter { @apply mx-auto block; }
+  .wp-prose .alignleft  { @apply float-left mr-6 mb-4 max-w-[50%]; }
+  .wp-prose .alignright { @apply float-right ml-6 mb-4 max-w-[50%]; }
+
+  /* Dark-mode tweaks */
+  .dark .wp-prose pre, .dark .wp-prose .wp-block-code {
+    @apply bg-card text-foreground border border-border;
+  }
+  .dark .wp-prose code { @apply bg-muted/60; }
+
+  /* Injected CTA / related cards — escape prose link styling */
+  .wp-prose .wp-inject-cta a,
+  .wp-prose .wp-inject-related a {
+    text-decoration: none !important;
+    font-weight: 600;
+  }
+  .wp-prose .wp-inject-cta a {
+    color: hsl(var(--foreground));
+  }
+  .wp-prose .wp-inject-cta p,
+  .wp-prose .wp-inject-related p,
+  .wp-prose .wp-inject-cta ul,
+  .wp-prose .wp-inject-related ul,
+  .wp-prose .wp-inject-cta li,
+  .wp-prose .wp-inject-related li {
+    margin: 0;
+  }
+  .wp-prose .wp-inject-related li + li { margin-top: 0.625rem; }
+}
+
+/* Subtle, hover-revealed scrollbar for sidebars and tall panels. */
+@layer utilities {
+  .scrollbar-ghost {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    transition: scrollbar-color 0.2s ease;
+  }
+  .scrollbar-ghost:hover,
+  .scrollbar-ghost:focus-within {
+    scrollbar-color: hsl(var(--muted-foreground) / 0.35) transparent;
+  }
+  .scrollbar-ghost::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-ghost::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-ghost::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 9999px;
+    transition: background 0.2s ease;
+  }
+  .scrollbar-ghost:hover::-webkit-scrollbar-thumb,
+  .scrollbar-ghost:focus-within::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.35);
+  }
+  .scrollbar-ghost::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.6);
+  }
+}

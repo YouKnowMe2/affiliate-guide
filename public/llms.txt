@@ -1,0 +1,30 @@
+# Affiliate Guidance
+
+> বাংলায় Affiliate Marketing শেখার premium platform — শূন্য থেকে শুরু করে প্রথম $1000 আয় পর্যন্ত complete গাইড, hand-picked tools, এবং real case studies।
+
+Affiliate Guidance helps Bangla-speaking learners start and grow their affiliate marketing income with step-by-step guides, tool reviews, and honest recommendations.
+
+## Pages
+
+- [Home](/): Overview of the platform, featured guides, and recommended tools.
+- [About](/about): Who runs Affiliate Guidance and the editorial approach.
+- [Contact](/contact): Reach out for collaboration, feedback, or questions.
+- [Guest Post](/guest-post): Write for Affiliate Guidance — guidelines and submission.
+- [Sponsored](/sponsored): Sponsored partnership and advertising options.
+
+## Blog
+
+- [Blog](/blog): Latest tutorials, guides, and case studies on affiliate marketing in Bangla.
+- [Categories](/categories): Browse posts by topic (SEO, blogging, monetization, tools).
+
+## Tools
+
+- [All Tools](/tools): Curated tools for affiliate marketers — hosting, SEO, keyword research, email marketing.
+- [Hosting](/tools/hosting): Web hosting recommendations for affiliate sites.
+- [SEO Tools](/tools/seo): SEO software for ranking affiliate content.
+- [Keyword Research](/tools/keyword): Keyword research tools.
+- [Email Marketing](/tools/email): Email service providers for list building.
+
+## Optional
+
+- [Sitemap](/sitemap): Full list of pages on the site.
